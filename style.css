@@ -1,0 +1,418 @@
+
+
+
+
+
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ANIMATED MODERN NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);  /* ✅ Glassmorphism */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    animation: navFade 0.7s ease-out; /* ✅ Navbar fade */
+}
+
+/* Navbar fade on page load */
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: #0fbc5e;
+    transform: scale(1.05); /* subtle hover */
+}
+
+/* Desktop menu */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    color: #111;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+}
+
+/* ✅ Animated underline */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #0fbc5e;
+    bottom: -2px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #0fbc5e;
+}
+
+/* Mobile toggle */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 34px;
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   MOBILE NAV (ANIMATED)
+========================= */
+
+@media (max-width: 950px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.92);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 18px;
+        display: none;
+        animation: menuSlide 0.35s ease;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+        /* ✅ Soft boxed card look */
+        border-radius: 0 0 18px 18px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Menu slide animation */
+    @keyframes menuSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ✅ Mobile menu item box effect */
+    .nav-links li a {
+        background: #ffffff;
+        padding: 10px 18px;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+
+    .nav-links li a:hover {
+        background: #0fbc5e;
+        color: #fff;
+        transform: translateY(-3px);
+    }
+
+    .nav-links li a::after {
+        display: none; /* no underline on mobile */
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+/* ✅ Make mobile menu activate on ALL phones */
+@media (max-width: 950px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide desktop menu on phones */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        gap: 20px;
+        display: none;
+        animation: slideDown 0.25s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f242d;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #1f242d;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.navbar ul li a:hover {
+    color: #7cf03d;
+}
+
+/* HOME */
+.home {
+    padding: 120px 8% 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home h1 {
+    font-size: 50px;
+}
+
+.home h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.home p {
+    margin-top: 10px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.btn-sci {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.btn {
+    background: #7cf03d;
+    color: #1f242d;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: transparent;
+    border: 2px solid #7cf03d;
+    color: #7cf03d;
+}
+
+/* SOCIAL ICONS */
+.sci a {
+    border: 2px solid #7cf03d;
+    padding: 8px;
+    border-radius: 50%;
+    color: #7cf03d;
+    transition: .3s;
+}
+
+.sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+}
+
+/* SECTION GLOW EFFECT */
+.glow-section {
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 0px #7cf03d; }
+    to { box-shadow: 0 0 30px #7cf03d; }
+}
+
+/* ✅ PROJECTS SECTION */
+.projects {
+    padding: 90px 8%;
+    text-align: center;
+    background: #1f242d;
+}
+
+.projects h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    background: #11151c;
+    width: 280px;
+    padding: 22px;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid #2b2f36;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf03d;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #7cf03d;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 40px;
+    background: #7cf03d;
+    color: #1f242d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: transparent;
+    border: 2px solid #7cf03d;
+    color: #7cf03d;
+}
+
+/* ABOUT */
+.about {
+    padding: 90px 8%;
+    background: #11151c;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* SERVICES */
+.services {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.service-item {
+    background: #11151c;
+    padding: 22px;
+    width: 280px

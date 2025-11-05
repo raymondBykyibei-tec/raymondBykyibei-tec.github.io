@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#home" class="logo">Portfolio.</a>
+    <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">My Services</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home" class="home">
+    <div class="home-info fade-in">
+        <h1>Raymond Bykyibei</h1>
+        <h2>I'm a Frontend Developer</h2>
+        <p>I design and build user-friendly websites and applications using modern web technologies.
+           Providing clean UI/UX, responsive layouts, and high-performance interfaces.
+        </p>
+
+        <div class="btn-sci">
+            <a href="#" class="btn">Download CV</a>
+            <div class="sci">
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ✅ PROJECTS SECTION (ADDED FIRST BEFORE ABOUT) -->
+<section id="projects" class="projects glow-section">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>A modern, responsive personal portfolio designed with clean UI and animations.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>E-commerce UI</h3>
+            <p>Beautiful online shop interface with product cards, filters, and interactive elements.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Branding & Logo Pack</h3>
+            <p>Logos, social banners, posters & media designs for digital brands.</p>
+            <a href="#" class="project-btn">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about glow-section">
+    <h2>About Me</h2>
+    <p>I am a passionate frontend developer with professional experience in building fast,
+       responsive and visually appealing websites. I specialize in HTML, CSS, JavaScript,
+       and modern UI frameworks.
+    </p>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services glow-section">
+    <h2>My Services</h2>
+    <div class="service-box">
+
+        <div class="service-item">
+            <h3>Website Design</h3>
+            <p>Beautiful, responsive website layouts that match your brand identity.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Frontend Development</h3>
+            <p>Fast and interactive UI using HTML, CSS, JavaScript and frameworks.</p>
+        </div>
+
+        <div class="service-item">
+            <h3>Branding & Graphics</h3>
+            <p>Logos, posters, banners, marketing materials & social media content.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section glow-section">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+
+        <div class="contact-left-title">
+            <h2 class="green-underline"><b>Contact Me Now</b></h2>
+            <hr>
+        </div>
+
+        <input type="hidden" name="access_key" value="7b53cc77-ff3c-4ab1-a7fe-66a7974a12d8">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="text" name="phone" placeholder="Your Phone Number" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+
+        <button type="submit">Submit</button>
+
+        <div class="contact-details">
+            <p><b>Email:</b> bykyibeiiraymond@gmail.com</p>
+            <p><b>Phone:</b> +254 791 418 154</p>
+            <p><b>Location:</b> Nairobi, Kenya</p>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
